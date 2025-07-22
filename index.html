@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankur Kundu - AI/ML Engineer</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Sankur Kundu, an AI/ML Engineer and Full-Stack Developer from Kolkata, specializing in machine learning, web development, and data analytics.">
+    <meta name="keywords" content="Sankur Kundu, AI/ML Engineer, Full-Stack Developer, Kolkata, Machine Learning, Web Development, Data Analytics, Python, TensorFlow, React">
+    <meta name="author" content="Sankur Kundu">
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Sankur Kundu - AI/ML Engineer Portfolio">
+    <meta property="og:description" content="Explore the portfolio of Sankur Kundu, showcasing AI/ML projects, full-stack development, and data analytics expertise from Kolkata.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sankurkundu.com"> <!-- Replace with your actual URL -->
+    <meta property="og:image" content="https://www.sankurkundu.com/og-image.jpg"> <!-- Replace with an actual image URL -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sankur Kundu - AI/ML Engineer Portfolio">
+    <meta name="twitter:description" content="Discover Sankur Kundu's AI/ML and full-stack development projects from Kolkata.">
+    <meta name="twitter:image" content="https://www.sankurkundu.com/og-image.jpg"> <!-- Replace with an actual image URL -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Palatino', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff6b35 100%);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Alpona-inspired decorative pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M40 40c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm20 0c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header with Bengali cultural elements */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px rgba(220, 53, 69, 0.3);
+            border-bottom: 3px solid #dc3545;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #dc3545;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: '🏛️';
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #dc3545;
+            transform: translateY(-2px);
+            background: rgba(220, 53, 69, 0.1);
+            border-radius: 8px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(90deg, #dc3545, #ffc107);
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Hero Section with Bengali cultural touch */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(220, 53, 69, 0.1) 25%, transparent 25%), 
+                        linear-gradient(-45deg, rgba(255, 193, 7, 0.1) 25%, transparent 25%);
+            background-size: 60px 60px;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(0px) translateY(0px); }
+            33% { transform: translateX(30px) translateY(-30px); }
+            66% { transform: translateX(-20px) translateY(20px); }
+            100% { transform: translateX(0px) translateY(0px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            animation: fadeInUp 1s ease;
+            background: linear-gradient(45deg, #fff, #ffc107);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .hero .bengali-phrase {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-style: italic;
+            animation: fadeInUp 1s ease 0.6s both;
+            color: #fff8e1; /* Adjusted for better contrast */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .location {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+            animation: fadeInUp 1s ease 0.9s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #dc3545, #ffc107);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+            animation: fadeInUp 1s ease 1.2s both;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(220, 53, 69, 0.6);
+            border: 2px solid #ffc107;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sections with Bengali motifs */
+        .section {
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            margin: 2rem 0;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(220, 53, 69, 0.2);
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #dc3545 0%, #ffc107 25%, #28a745 50%, #17a2b8 75%, #6f42c1 100%);
+        }
+
+        .section::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid transparent;
+            border-image: linear-gradient(45deg, rgba(220, 53, 69, 0.3), rgba(255, 193, 7, 0.3)) 1;
+            pointer-events: none;
+            border-radius: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '❋';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: #dc3545;
+        }
+
+        /* Skills Grid with Bengali colors */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #dc3545 0%, #ffc107 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            transform: rotate(45deg);
+            transition: all 0.4s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-12px) rotateY(8deg);
+            box-shadow: 0 20px 40px rgba(220, 53, 69, 0.4);
+        }
+
+        .skill-card:hover::before {
+            transform: rotate(45deg) scale(1.2);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .skill-list {
+            list-style: none;
+            line-height: 2;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Experience Cards with Bengali design */
+        .experience-card, .project-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(220, 53, 69, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card::before, .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(to bottom, #dc3545 0%, #ffc107 50%, #28a745 100%);
+        }
+
+        .experience-card:hover, .project-card:hover {
+            transform: translateX(15px);
+            box-shadow: 0 15px 30px rgba(220, 53, 69, 0.2);
+            border-color: #dc3545;
+        }
+
+        .experience-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .experience-title, .project-title {
+            font-size: 1.4rem;
+            color: #dc3545;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-date, .project-date {
+            background: linear-gradient(135deg, #dc3545, #ffc107);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+        }
+
+        .achievement {
+            margin: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .achievement::before {
+            content: '🏺';
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Project Link Button */
+        .project-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #dc3545, #ffc107);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+        }
+
+        .project-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(220, 53, 69, 0.5);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        .contact-form h3 {
+            color: #dc3545;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 2px solid rgba(220, 53, 69, 0.2);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #dc3545;
+            box-shadow: 0 0 10px rgba(220, 53, 69, 0.3);
+        }
+
+        .contact-form button {
+            display: block;
+            margin: 0 auto;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #dc3545, #ffc107);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(220, 53, 69, 0.5);
+        }
+
+        .form-error {
+            color: #dc3545;
+            font-size: 0.9rem;
+            margin-top: -0.5rem;
+            margin-bottom: 1rem;
+            display: none;
+            text-align: center;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .contact-item {
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #dc3545 0%, #ffc107 100%);
+            color: white;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+        }
+
+        .contact-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .contact-item:hover::before {
+            left: 100%;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(220, 53, 69, 0.4);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer with Bengali touch */
+        .footer {
+            background: rgba(44, 62, 80, 0.95);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+            backdrop-filter: blur(15px);
+            border-top: 3px solid #dc3545;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .bengali-blessing {
+            font-size: 1.1rem;
+            color: #fff8e1; /* Adjusted for better contrast */
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Mobile Hamburger Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #2c3e50;
+            cursor: pointer;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                padding: 1.5rem;
+                border-radius: 0 0 20px 20px;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+                border-top: 2px solid #dc3545;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .bengali-phrase {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .experience-header, .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                margin: 1rem 0;
+                padding: 2.5rem 0;
+            }
+
+            .skill-card, .experience-card, .project-card, .contact-item, .contact-form {
+                padding: 2rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Bengali cultural decorative elements */
+        .cultural-accent {
+            display: inline-block;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            color: #fff8e1; /* Adjusted for better contrast */
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="nav" role="navigation">
+                <div class="logo" aria-label="Sankur Kundu Logo">Sankur Kundu</div>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">☰</button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about" aria-label="About section">About</a></li>
+                    <li><a href="#skills" aria-label="Skills section">Skills</a></li>
+                    <li><a href="#experience" aria-label="Experience section">Experience</a></li>
+                    <li><a href="#projects" aria-label="Projects section">Projects</a></li>
+                    <li><a href="#contact" aria-label="Contact section">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" role="region" aria-label="Hero section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Sankur Kundu</h1>
+                <p class="subtitle">AI/ML Engineer & Full-Stack Developer</p>
+                <p class="bengali-phrase">"জ্ঞানই শক্তি, প্রযুক্তিই ভবিষ্যৎ" (Knowledge is power, technology is the future.)<span class="cultural-accent" aria-hidden="true">🪷</span></p>
+                <p class="location">📍 Kolkata, West Bengal - শহর আনন্দের</p>
+                <a href="#contact" class="cta-button">যোগাযোগ করুন (Contact)</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container" role="main">
+        <section id="about" class="section fade-in" role="region" aria-label="About section">
+            <h2 class="section-title">আমার পরিচয় (About) <span class="cultural-accent" aria-hidden="true">🎭</span></h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8;">
+                <p>Results-driven Computer Science Engineering student specializing in AI/ML with experience in full-stack development and data analytics. Delivered $2.3M operational cost savings through predictive modeling and achieved 94.8% accuracy in machine learning implementations. Proven expertise in building scalable applications and optimizing database performance.</p>
+                <br>
+                <p style="font-style: italic; color: #dc3545;"></p>
+            </div>
+        </section>
+
+        <section id="skills" class="section fade-in" role="region" aria-label="Skills section">
+            <h2 class="section-title">কারিগরি দক্ষতা (Skills) <span class="cultural-accent" aria-hidden="true">⚡</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming Languages 💻</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>C++</li>
+                        <li>SQL</li>
+                        <li>R</li>
+                        <li>Java</li>
+                        <li>HTML5 & CSS3</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Frameworks & Libraries 🔧</h3>
+                    <ul class="skill-list">
+                        <li>React.js</li>
+                        <li>Node.js & Express.js</li>
+                        <li>TensorFlow & PyTorch</li>
+                        <li>Django & Flask</li>
+                        <li>ONNX Runtime</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Database & Cloud ☁️</h3>
+                    <ul class="skill-list">
+                        <li>PostgreSQL</li>
+                        <li>MongoDB & MySQL</li>
+                        <li>Redis</li>
+                        <li>AWS & Azure</li>
+                        <li>Google Cloud Platform</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>AI/ML Specialization 🤖</h3>
+                    <ul class="skill-list">
+                        <li>Model Compression</li>
+                        <li>Quantization & Pruning</li>
+                        <li>Knowledge Distillation</li>
+                        <li>Neural Architecture Search</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section fade-in" role="region" aria-label="Experience section">
+            <h2 class="section-title">কর্ম অভিজ্ঞতা (Experience)<span class="cultural-accent" aria-hidden="true">🏆</span></h2>
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Software Development Engineer Intern</div>
+                        <div style="color: #666; margin-top: 0.5rem; font-size: 1.1rem;">BlueStock Fintech | Kolkata <span aria-hidden="true">🏙️</span></div>
+                    </div>
+                    <div class="experience-date">May 2025 - July 2025</div>
+                </div>
+                <div class="achievement">Architected microservices using Node.js supporting 1,000+ concurrent users with 99.9% uptime</div>
+                <div class="achievement">Executed Redis caching and database improvements achieving 40% performance boost</div>
+                <div class="achievement">Built real-time financial data processing handling 10,000+ daily transactions</div>
+            </div>
+        </section>
+
+        <section id="projects" class="section fade-in" role="region" aria-label="Projects section">
+            <h2 class="section-title">প্রকল্প সমূহ (Projects)<span class="cultural-accent" aria-hidden="true">🚀</span></h2>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <div class="project-title">AI Model Compression for TSMC 3nm Chips</div>
+                        <div style="color: #666; margin-top: 0.5rem;">Disaster Classification System <span aria-hidden="true">🌊</span></div>
+                    </div>
+                    <div class="project-date">July 2025</div>
+                </div>
+                <div class="achievement">Enhanced MobileNetV3-Small for TSMC 3nm accelerators reaching 50% model sparsity via pruning</div>
+                <div class="achievement">Delivered <100ms inference latency at ~5W power for edge disaster classification systems</div>
+                <div style="margin-top: 1.5rem; font-weight: bold; color: #dc3545; padding: 1rem; background: rgba(220, 53, 69, 0.1); border-radius: 10px;">
+                    🛠️ Technologies: Python, TensorFlow, PyTorch, ONNX Runtime, Neural Architecture Search
+                </div>
+                <a href="https://github.com/SankurTW/AI-Model-Compression-for-TSMC-3nm-Chips-Disaster-Classification" target="_blank" class="project-link" aria-label="View AI Model Compression project on GitHub">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <div class="project-title">AI-Powered Security Monitoring System</div>
+                        <div style="color: #666; margin-top: 0.5rem;">Advanced Threat Detection <span aria-hidden="true">🛡️</span></div>
+                    </div>
+                    <div class="project-date">Feb-Mar 2025</div>
+                </div>
+                <div class="achievement">Created BERT-based threat detection reaching 94.8% accuracy, reduced false alerts by 73%</div>
+                <div class="achievement">Streamlined cloud infrastructure costs by 65% through efficient resource allocation and automated scaling</div>
+                <div style="margin-top: 1.5rem; font-weight: bold; color: #dc3545; padding: 1rem; background: rgba(220, 53, 69, 0.1); border-radius: 10px;">
+                    🛠️ Technologies: Python, TensorFlow, BERT, AWS SageMaker, Docker, PostgreSQL
+                </div>
+                <a href="https://github.com/SankurTW/Detek" target="_blank" class="project-link" aria-label="View Security Monitoring System project on GitHub">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <div class="project-title">Aviation Revenue Analysis</div>
+                        <div style="color: #666; margin-top: 0.5rem;">Data-Driven Insights <span aria-hidden="true">✈️</span></div>
+                    </div>
+                    <div class="project-date">June 2025</div>
+                </div>
+                <div class="achievement">Analyzed 50,000+ flight operations records identifying 15% profit enhancement opportunities</div>
+                <div class="achievement">Developed interactive dashboards improving operational planning efficiency by 25%</div>
+                <div style="margin-top: 1.5rem; font-weight: bold; color: #dc3545; padding: 1rem; background: rgba(220, 53, 69, 0.1); border-radius: 10px;">
+                    🛠️ Technologies: Python, R, Google BigQuery, Tableau, Statistical Modeling, Data Visualization
+                </div>
+                <a href="https://github.com/SankurTW/Airline-Route-Profitability-Analysis" target="_blank" class="project-link" aria-label="View Aviation Revenue Analysis project on GitHub">View Project</a>
+            </div>
+        </section>
+
+        <section id="contact" class="section fade-in" role="region" aria-label="Contact section">
+            <h2 class="section-title">যোগাযোগ (Contact) <span class="cultural-accent" aria-hidden="true">📞</span></h2>
+            <div class="contact-grid">
+                <a href="mailto:Sankur.kundu.tw@gmail.com" class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">✉️</div>
+                    <div style="font-size: 1.2rem; font-weight: bold;">ইমেইল(Email)</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.5rem;">Sankur.kundu.tw@gmail.com</div>
+                </a>
+                <a href="tel:+919776194201" class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">📱</div>
+                    <div style="font-size: 1.2rem; font-weight: bold;">ফোন(Phone)</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.5rem;">+91-9776194201</div>
+                </a>
+                <a href="https://www.linkedin.com/in/sankur-kundu/" target="_blank" class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">💼</div>
+                    <div style="font-size: 1.2rem; font-weight: bold;">LinkedIn</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.5rem;">Professional Profile</div>
+                </a>
+            </div>
+            <div class="contact-form" role="form" aria-label="Contact form">
+                <h3>Send a Message</h3>
+                <form id="contactForm" action="mailto:Sankur.kundu.tw@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                    <div class="form-error" id="formError">Please fill out all fields correctly.</div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="bengali-blessing"></div>
+                <p>© 2025 Sankur Kundu<span aria-hidden="true"></span></p>
+                <p style="margin-top: 0.5rem; opacity: 0.9;">BTech - Computer Science and Engineering (AI & ML) | Institute of Engineering and Management</p>
+                <p style="margin-top: 0.5rem; opacity: 0.8; font-size: 0.9rem;">সবাইকে ধন্যবাদ (Thank you to everyone.)<span aria-hidden="true">🌟</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                // Close mobile menu if open
+                const navLinks = document.getElementById('navLinks');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+
+                // Calculate offset for header height
+                const headerOffset = document.querySelector('.header').offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll animation for fade-in elements
+        const fadeInElements = document.querySelectorAll('.fade-in');
+
+        const handleScroll = () => {
+            fadeInElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top <= window.innerHeight * 0.8;
+                
+                if (isVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        // Initialize scroll animations
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+
+        // Handle initial load animation for hero section
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroContent = document.querySelector('.hero-content');
+            heroContent.style.opacity = '0';
+            setTimeout(() => {
+                heroContent.style.opacity = '1';
+                heroContent.style.transition = 'opacity 1s ease';
+            }, 100);
+        });
+
+        // Handle scroll to top when clicking logo
+        document.querySelector('.logo').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Handle active navigation link highlighting
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - document.querySelector('.header').offsetHeight;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Contact form validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const error = document.getElementById('formError');
+            
+            if (name && email && message && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                this.submit(); // Submit the form if validation passes
+            } else {
+                error.style.display = 'block';
+                setTimeout(() => { error.style.display = 'none'; }, 3000);
+            }
+        });
+
+        // Add active class to nav links for styling
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .nav-links a.active {
+                color: #dc3545;
+                background: rgba(220, 53, 69, 0.1);
+                border-radius: 8px;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
